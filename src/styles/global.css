@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --primary-pink: #D658B3;
+  --primary-green: #45B442;
+
+  --gray-700: #332B31;
+  --gray-600: #4A4448;
+  --gray-500: #756C71;
+  --gray-400: #D3CFD2;
+  --gray-300: #DFDCDF;
+  --gray-200: #E9E7E9;
+  --gray-100: #F4F1F2;
+  --white: #FFFFFF;
+
+  --gradient-0: #2DAA6E;
+  --gradient-33: #2DAAAA;
+  --gradient-67: #856CCF;
+  --gradient-100: #D658B3;
+
+  --ff-sans: 'Oxygen', system-ui, sans-serif;
+
+  --fw-bold: 700;
+  --fw-regular: 400;
+
+  --fs-sm: 0.75rem;
+  --fs-base: 0.875rem;
+  --fs-lg: 1rem;
+  --fs-xl: 1.125rem;
+  --fs-2xl: 1.5rem;
+
+  --line-height: 140%;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-pink);
+  border-radius: 4px;
+}
+
+body {
+  font-family: "Oxygen", sans-serif;
+  font-size: 4rem;
+}
