@@ -39,7 +39,7 @@
   --fs-xl: 1.125rem;
   --fs-2xl: 1.5rem;
 
-  --line-height: 140%;
+  --line-height: 1.4;
 }
 
 ::-webkit-scrollbar {
@@ -55,7 +55,12 @@
   border-radius: 4px;
 }
 
+html {
+  font-family: var(--ff-sans);
+  line-height: var(--line-height);
+  color: var(--gray-600);
+}
+
 body {
-  font-family: "Oxygen", sans-serif;
-  font-size: 4rem;
+  background-color: var(--gray-200);
 }
