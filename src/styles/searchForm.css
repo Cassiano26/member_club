@@ -83,21 +83,6 @@
                 linear-gradient(45deg, #698DD9, rgba(0, 0, 0, 0) 50%),
                 linear-gradient(315deg, #45B442, rgba(0, 0, 0, 0) 50%),
                 linear-gradient(225deg, #6B84DE, rgba(0, 0, 0, 0) 50%);
-                
-
-    
-    /* background: linear-gradient(0deg, #AF74DE, #AF74DE, 70%),
-                linear-gradient(45deg, #6B84DE, #6B84DE, 70%),
-                linear-gradient(90deg, #5DCAB7, #5DCAB7, 70%),
-                linear-gradient(135deg, #45B442, #45B442, 70%),
-                linear-gradient(180deg, #5EC6B9, #5EC6B9, 70%),
-                linear-gradient(225deg, #698DD9, #698DD9, 70%),
-                linear-gradient(270deg, #B173DC, #B173DC, 70%),
-                linear-gradient(315deg, #D658B3, #D658B3, 70%); */
-
-  
-
-
 
   }
 
@@ -122,9 +107,60 @@
 }
 
 .history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  background-color: var(--gray-100);
+
   border-radius: 1rem;
   grid-area: c;
-  background-color: blue;
+  
+  padding: 24px;
+
+  div:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+
+    span:nth-of-type(1) {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-sm);
+      text-transform: uppercase;
+      color: var(--gray-500)
+    }
+    
+    span:nth-of-type(2) {
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-sm);
+      color: var(--gray-500)
+    }
+  }
+
+  .historyItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 12px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: start;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
 
 .marks {
