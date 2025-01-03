@@ -57,6 +57,7 @@
   "c b"
   "c d";
   font-family: var(--ff-sans);
+  padding-bottom: 2rem;
 
 }
 
@@ -89,7 +90,7 @@
   img {
     width: 56px;
     height: 56px;
-    border: 3px solid var(--gray-100);
+    border: 2px solid var(--gray-100);
     border-radius: 10px;
   }
 
@@ -137,6 +138,8 @@
   }
 
   .historyItems {
+    overflow: hidden;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -147,6 +150,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-right: 10px;
 
       div {
         display: flex;
@@ -158,21 +162,85 @@
       img {
         width: 24px;
         height: 24px;
+        
       }
     }
   }
 }
 
 .marks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   border-radius: 1rem;
   grid-area: b;
-  background-color: green;
+  background-color: var(--gray-100);
+  padding: 2rem;
+
+  .marksHeading {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      span:nth-of-type(1) {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-sm);
+        text-transform: uppercase;
+        color: var(--gray-500)
+      }
+
+      span:nth-of-type(2) {
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-sm);
+        color: var(--gray-500)
+      }
+    }
+
+    &>span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-base);
+      text-transform: uppercase;
+      color: var(--gray-500);
+      background-color: var(--gray-300);
+      width: 149px;
+      height: 32px;
+      border-radius: 999px;
+      text-align: center;
+      
+    }
+  }
+
+  .marksHistory {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 20px;
+      background-color: var(--gray-200);
+    }
+  }
+
 }
 
 .remaining {
   border-radius: 1rem;
   grid-area: d;
-  background-color: yellow;
+  background-color: var(--gray-100);
+
+  
 }
 
 
