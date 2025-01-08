@@ -47,6 +47,7 @@
 }
 
 .home {
+  visibility: hidden;
   padding-top: 2rem;
   display: grid;
   gap: 1rem;
@@ -276,7 +277,7 @@
         &::before {
           content: "";
           background: linear-gradient(to right, var(--primary-green), var(--gradient-33), var(--gradient-67), var(--primary-pink));
-          width:190px;
+          width: var(--custom-width, 50%);
           height: 8px;
           position: absolute;
           border-radius: 999px;

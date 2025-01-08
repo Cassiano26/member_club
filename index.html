@@ -14,28 +14,28 @@
 <body>
   <div class="headerForm">
     <img src="./src/assets/logo.png" alt="">
-    <form action="">
-      <input type="text" placeholder="ID do cartão">
+    <form id="formID" action="">
+      <input id="inputId" type="text" placeholder="ID do cartão">
       <button>
         <img src="./src/assets/ArrowElbowDownLeft.png" alt="">
       </button>
     </form>
-    <section class="home">
+    <section id="home" class="home">
       <div class="profile">
         <div class="gradientProfile">
           <img src="./src/assets/Picture.jpeg" alt="">
         </div>
         <div>
-          <h4>Natália Miranda</h4>
-          <h5>Cliente desde 18/09/2023</h5>
+          <h4 id="profileName">Natália Miranda</h4>
+          <h5 id="clientSince">Cliente desde 18/09/2023</h5>
         </div>
       </div>
       <div class="history">
         <div>
           <span>histórico</span>
-          <span>7 cortes</span>
+          <span id="totalCuts">7 cortes</span>
         </div>
-        <div class="historyItems">
+        <div id="historyItems" class="historyItems">
           <div>
             <div>
               <span>29/04/2024</span>
@@ -149,9 +149,9 @@
             <span>cartão fidelidade</span>
             <span>Ao fazer cortes de cabelo, o décimo sai de graça!</span>
           </div>
-          <span>ID: 124-537-835-230</span>
+          <span id="IdClient">ID: 124-537-835-230</span>
         </div>
-        <div class="marksHistory">
+        <div id="marksHistory" class="marksHistory">
           <div>
             <img src="./src/assets/markGreen.png" alt="">
           </div>
@@ -188,12 +188,12 @@
       <div class="remaining">
         <div>
           <div>
-            <span>3</span>
+            <span id="remainingCuts">3</span>
             <span>cortes restantes</span>
           </div>
           <div>
-            <div></div>
-            <span>7 de 10</span>
+            <div id="barTotalCuts"></div>
+            <span id="cutsOfTen">7 de 10</span>
           </div>
         </div>
         <div>
