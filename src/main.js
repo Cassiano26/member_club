@@ -16,6 +16,8 @@ const input = document.getElementById('inputId')
 const remainingCutsComponent = document.getElementById("remainingCuts")
 const cutsOfTenComponent = document.getElementById("cutsOfTen")
 const barTotalCutsComponent = document.getElementById("barTotalCuts")
+const imageProfileComponent = document.getElementById("imageProfile")
+const temCutsModalComponent = document.getElementById("temCutsModal")
 
 input.addEventListener('input', (e) => {
   const regex = /^[0-9\-]*$/
@@ -32,6 +34,8 @@ input.addEventListener('input', (e) => {
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
 
+  temCutsModalComponent.style.opacity = '0'
+
   const response = await findClientById(e.target.inputId.value)
 
   if (response?.name) {
@@ -40,6 +44,8 @@ form.addEventListener('submit', async (e) => {
     homeComponent.style.visibility = 'visible'
 
     profileNameComponent.textContent = response.name
+
+    imageProfileComponent.src = response.image
 
     clientSinceComponent.textContent = `Cliente desde ${response.clientSince}`
 
@@ -58,8 +64,8 @@ form.addEventListener('submit', async (e) => {
     IdClientComponent.textContent = `ID ${response.id}`
 
     if (response.loyaltyCard.totalCuts == 10) {
-      console.log()
-      alert("você possui um corte grátis")
+
+      temCutsModalComponent.style.opacity = '1'
       marksHistoryComponent.innerHTML = Array.from( {length: response.loyaltyCard.cutsNeeded}).map((_, index) => {
         return `<div>
                   <img src="./src/assets/markGreen.png" alt="">

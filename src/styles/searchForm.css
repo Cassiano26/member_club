@@ -1,4 +1,5 @@
 .headerForm {
+  position: relative;
   margin-top: 4rem;
   display: flex;
   align-items: center;
@@ -304,4 +305,27 @@
 
 }
 
+#temCutsModal {
+  position: absolute;
+  opacity: 0;
 
+  width: 300px;
+  height: 100px;
+  background-color: var(--gray-100);
+  border-radius: 10px;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: all 1s;
+  
+
+  h4 {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
+    color: var(--gray-500);
+  }
+}
