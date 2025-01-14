@@ -37,5 +37,9 @@ npm run server
 ```bash
 npm run dev
 ```
+## App images
+
+![Screenshot from 2025-01-14 14-37-39](https://github.com/user-attachments/assets/8878e562-4c71-4921-9dbe-2bb5f3fd1c46)
+
 
 
